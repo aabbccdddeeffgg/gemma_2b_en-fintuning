@@ -18,3 +18,7 @@ score = evaluate_with_rouge(x, test_data)
 print(type(train_data[0]))
 print(train_data)
 print(score)
+
+
+x = [1,2,3,4,5,6,7,8,9,10]
+print(x[:2])
