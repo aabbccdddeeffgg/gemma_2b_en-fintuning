@@ -10,9 +10,9 @@ df = pd.read_csv("D:\\课程资料及作业\\kaggle\\data\\Tang Poetry Dataset.c
 # 对指定列进行繁体字到简体字的转换
 for index, row in df.iterrows():
     # 确保在转换之前，每个值都是字符串
-    row['title'] = t2s_converter.convert(str(row['title'])) if pd.notnull(row['title']) else ''
-    row['author'] = t2s_converter.convert(str(row['author'])) if pd.notnull(row['author']) else ''
-    row['poetry'] = t2s_converter.convert(str(row['poetry'])) if pd.notnull(row['poetry']) else ''
+    row['title'] = t2s_converter.convert(str(row['title']))
+    row['author'] = t2s_converter.convert(str(row['author']))
+    row['poetry'] = t2s_converter.convert(str(row['poetry']))
 
     # 将转换后的值更新回DataFrame
     df.at[index, 'title'] = row['title']

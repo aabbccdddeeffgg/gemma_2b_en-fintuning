@@ -14,9 +14,6 @@ def evaluate_with_rouge(reference_list, generated_list):
         reference = ' '.join(jieba.cut(reference))
         generated = ' '.join(jieba.cut(generated))
         scores = rouge.get_scores(reference, generated)
-        print(reference)
-        print(generated)
-        print(scores)
         # 将每个ROUGE评分的F1值添加到列表中
         rouge1_scores.append(scores[0]['rouge-1']["f"])
         rougeL_scores.append(scores[0]['rouge-l']["f"])
